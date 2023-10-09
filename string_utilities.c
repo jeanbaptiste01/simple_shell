@@ -16,8 +16,7 @@ char *custom_concat(char *target, char *extension)
 		;
 
 	/* Append the extension string to the target */
-	do
-	{
+	do {
 		target[target_length] = extension[i];
 		target_length++;
 		i++;
@@ -40,8 +39,7 @@ int custom_length(const char *strinput)
 	int i = 0;
 
 /* Iterate through the string until a null character is encountered */
-	do
-	{
+	do {
 		i++;
 	} while (strinput[i]);
 
@@ -118,8 +116,7 @@ char *custom_duplicate(char *original)
 		return (NULL);
 
 	/* Copy characters from the original to the duplicate string */
-	do
-	{
+	do {
 		duplicate_string[index] = original[index];
 		index++;
 	} while (index < length);
