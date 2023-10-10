@@ -21,5 +21,7 @@ int custom_string_compare(const char *cstr1, const char *cstr2, size_t cn);
 int _putchar(char charac);
 void _puts(char *strn);
 void *custom_reallocate(void *ptr, unsigned int osize, unsigned int nsize);
+int custom_count_delimiters(char *wstr, char *occurrences);
+int custom_count_words(char *user_input);
 
 #endif
