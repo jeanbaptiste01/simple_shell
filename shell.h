@@ -24,6 +24,6 @@ void *custom_reallocate(void *ptr, unsigned int osize, unsigned int nsize);
 int custom_count_delimiters(char *wstr, char *occurrences);
 int custom_count_words(char *user_input);
 char *modify_string(char *input_string);
-
+void handle_custom_signal(int signal_num);
 
 #endif
