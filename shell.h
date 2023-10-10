@@ -25,5 +25,6 @@ int custom_count_delimiters(char *wstr, char *occurrences);
 int custom_count_words(char *user_input);
 char *modify_string(char *input_string);
 void handle_custom_signal(int signal_num);
+void open_help_menu(void);
 
 #endif
