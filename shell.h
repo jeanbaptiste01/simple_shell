@@ -30,5 +30,6 @@ void custom_print_environment(void);
 void custom_exit_handler(char **user_tokens, char *input_line);
 void free_environment_path(char *custom_env_path);
 void array_free_tokens(char **custom_tokens);
+int execute_commands(char **user_tokens, char *input_line);
 
 #endif
