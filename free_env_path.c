@@ -30,8 +30,8 @@ void array_free_tokens(char **custom_tokens)
 	if (custom_tokens)
 	{
 		do {
-			free(*custom_tokens);
-			custom_tokens++;
+			free(*custom_tokens++);
 		} while (*custom_tokens);
+		free(ptr);
 	}
 }

@@ -19,9 +19,10 @@ char *custom_duplicate(char *original);
 int custom_convert_to_integer(char *str);
 int custom_string_compare(const char *cstr1, const char *cstr2, size_t cn);
 int _putchar(char charac);
+char *get_environment_variable(const char *enviname);
 void _puts(char *strn);
 void *custom_reallocate(void *ptr, unsigned int osize, unsigned int nsize);
-int custom_count_delimiters(char *wstr, char *occurrences);
+int custom_count_occurrences(char *wstr, char *occurrences);
 int custom_count_words(char *user_input);
 char *modify_string(char *input_string);
 void handle_custom_signal(int signal_num);
@@ -31,5 +32,9 @@ void custom_exit_handler(char **user_tokens, char *input_line);
 void free_environment_path(char *user_env_path);
 void array_free_tokens(char **custom_tokens);
 int execute_commands(char **user_tokens, char *input_line);
+char *merge_path(char *paname, char *prname);
+int execute(char *cn, char **op);
+char *user_find(char *cn);
+char **split_string(char *input_str, char *del_char, int max_tokens);
 
 #endif
