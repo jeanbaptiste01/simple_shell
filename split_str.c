@@ -14,7 +14,7 @@ char **split_string(char *input_str, char *del_char, int max_tokens)
 	char **token_array = NULL;
 	char *current_token = NULL;
 	char *temporary_token = NULL;
-	int i;
+	int i = 0;
 
 	token_array = malloc(sizeof(char *) * (max_tokens + 1));
 	if (!token_array)
@@ -24,10 +24,11 @@ char **split_string(char *input_str, char *del_char, int max_tokens)
 	temporary_token = custom_duplicate(input_str);
 	current_token = strtok(temporary_token, del_char);
 
-	for (i = 0; current_token; i++)
+	while (current_token)
 	{
 		token_array[i] = custom_duplicate(current_token);
 		current_token = strtok(NULL, del_char);
+		i++;
 	}
 
 	token_array[i] = NULL;

@@ -11,8 +11,8 @@ void free_environment_path(char *user_env_path)
 	int a = 4;
 
 	do {
-		user_env_path--;
 		a--;
+		user_env_path--;
 	} while (a >= 0);
 	free(user_env_path);
 }
