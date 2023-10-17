@@ -18,10 +18,13 @@ char *get_environment_variable(const char *enviname)
 		if (custom_string_compare(enviname,
 		environ[k], custom_length(enviname)) == 0)
 		{
-			ev = custom_duplicate(environ[k]);
-			for (; *ev != '='; ev++)
-
-			++ev;
+			ev = malloc(custom_length(environ[k] + 1));
+			if (ev == NULL)
+			{
+				perror("Error allocating memory");
+				exit(EXIT_FAILURE);
+			}
+			custom_concat(ev, environ[k]);
 			return (ev);
 		}
 	}

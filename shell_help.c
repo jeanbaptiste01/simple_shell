@@ -7,6 +7,6 @@
  */
 void open_help_menu(void)
 {
-	_puts("\n***WELCOME TO THE SHELL HELP MENU***\n");
+	_puts("\n What can we help you\n");
 }
 

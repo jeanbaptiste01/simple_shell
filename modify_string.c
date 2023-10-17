@@ -19,4 +19,3 @@ char *modify_string(char *input_string)
 
 	return (input_string);
 }
-
