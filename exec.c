@@ -46,7 +46,7 @@ char *user_find(char *cn)
 
 			for (i = 0; user_token[i]; i++)
 			{
-					user_token[i] = merge_path(user_token[i], cn);
+				user_token[i] = merge_path(user_token[i], cn);
 
 				if (stat(user_token[i], &sb) == 0)
 				{
